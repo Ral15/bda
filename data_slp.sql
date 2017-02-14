@@ -1,12 +1,21 @@
--- sucursal
+--sucursal
+insert into e7sucursal (id, nombre, ubicacion, telefono, horario)
+values (seq_sucursal.nextval, 'Sucursal Big Cesar Pizzas CDMX', ' Calle Hermosillo No. 26', '55 5564 1973', '10:30AM-10:30PM');
+
+insert into e7sucursal (id, nombre, ubicacion, telefono, horario)
+values (seq_sucursal.nextval, 'Sucursal Big Cesar Pizzas Querétaro', 'Av. Pie de la Cuesta #512', '442 246 3141', '10:30AM-10:30PM');
+
 insert into e7sucursal (id, nombre, ubicacion, telefono, horario)
 values (seq_sucursal.nextval, 'Sucursal Big Cesar Pizzas SLP', 'Doctor Salvador Nava Martínez 435', '444 818 6233', '10:30AM-10:30PM');
+
 
 --puesto
 insert into e7puesto (id, nombre_puesto, sueldo) values (seq_puesto.nextval, 'Gerente', 10000.00);
 insert into e7puesto (id, nombre_puesto, sueldo) values (seq_puesto.nextval, 'Ventas', 8000.00);
 insert into e7puesto (id, nombre_puesto, sueldo) values (seq_puesto.nextval, 'Limpieza', 5000.00);
 insert into e7puesto (id, nombre_puesto, sueldo) values (seq_puesto.nextval, 'Cocina', 8000.00);
+
+
 
 --empleado
 insert into e7empleado (id, sucursal_id, puesto_id, nombre, apellido, telefono) values (seq_empleado.nextval, 1, null, 'Anthony', 'Ryan', '62-(669)186-5457');

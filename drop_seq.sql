@@ -1,0 +1,16 @@
+DROP SEQUENCE seq_sucursal;
+DROP SEQUENCE seq_empleado;
+DROP SEQUENCE seq_nomina;
+DROP SEQUENCE seq_cliente;
+DROP SEQUENCE seq_gasto;
+DROP SEQUENCE seq_puesto;
+DROP SEQUENCE seq_compra;
+DROP SEQUENCE seq_inventario;
+DROP SEQUENCE seq_ingrediente;
+DROP SEQUENCE seq_merma;
+DROP SEQUENCE seq_proveedor;
+DROP SEQUENCE seq_req_ingredientes;
+DROP SEQUENCE seq_menu;
+DROP SEQUENCE seq_producto;
+DROP SEQUENCE seq_venta;
+DROP SEQUENCE seq_orden;

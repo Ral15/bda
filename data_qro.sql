@@ -1,13 +1,21 @@
-
 --sucursal
 insert into e7sucursal (id, nombre, ubicacion, telefono, horario)
+values (seq_sucursal.nextval, 'Sucursal Big Cesar Pizzas CDMX', ' Calle Hermosillo No. 26', '55 5564 1973', '10:30AM-10:30PM');
+
+insert into e7sucursal (id, nombre, ubicacion, telefono, horario)
 values (seq_sucursal.nextval, 'Sucursal Big Cesar Pizzas Querétaro', 'Av. Pie de la Cuesta #512', '442 246 3141', '10:30AM-10:30PM');
+
+insert into e7sucursal (id, nombre, ubicacion, telefono, horario)
+values (seq_sucursal.nextval, 'Sucursal Big Cesar Pizzas SLP', 'Doctor Salvador Nava Martínez 435', '444 818 6233', '10:30AM-10:30PM');
+
 
 --puesto
 insert into e7puesto (id, nombre_puesto, sueldo) values (seq_puesto.nextval, 'Gerente', 10000.00);
 insert into e7puesto (id, nombre_puesto, sueldo) values (seq_puesto.nextval, 'Ventas', 8000.00);
 insert into e7puesto (id, nombre_puesto, sueldo) values (seq_puesto.nextval, 'Limpieza', 5000.00);
 insert into e7puesto (id, nombre_puesto, sueldo) values (seq_puesto.nextval, 'Cocina', 8000.00);
+
+
 
 --empleado
 insert into e7empleado (id, sucursal_id, puesto_id, nombre, apellido, telefono) values (seq_empleado.nextval, 11, 1, 'Timothy', 'Diaz', '21509-6621');
@@ -18,7 +26,7 @@ insert into e7empleado (id, sucursal_id, puesto_id, nombre, apellido, telefono) 
 insert into e7empleado (id, sucursal_id, puesto_id, nombre, apellido, telefono) values (seq_empleado.nextval, 11, 4, 'Billy', 'Cook', '6947-7127');
 
 
---nomina **monto, empleado_id
+-- -- nomina **monto, empleado_id
 -- insert into e7nomina (id, empleado_id, monto) values (seq_nomina.nextval, , );
 -- insert into e7nomina (id, empleado_id, monto) values (seq_nomina.nextval, , );
 -- insert into e7nomina (id, empleado_id, monto) values (seq_nomina.nextval, , );
@@ -39,7 +47,7 @@ insert into e7cliente (id, nombre, telefono, sucursal_id) values (seq_cliente.ne
 
 
 --menu
-insert into e7menu(id, sucursal_id) values (seq_menu.nextval, 11);
+-- insert into e7menu(id, sucursal_id) values (seq_menu.nextval, 11);
 
 --venta
 -- insert into e7venta(id, empleado_id, sucursal_id, cliente_id, monto) values (seq_venta.nextval, null, null, null, 100);
