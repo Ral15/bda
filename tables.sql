@@ -79,23 +79,24 @@ CREATE TABLE e7inventario (
   id            INT PRIMARY KEY,
   sucursal_id   INT REFERENCES e7sucursal(id),
   cantidad      INT NOT NULL,
-  id_item       INT NOT NULL,
+  item_id       INT NOT NULL,
   tipo_item     CHAR(1) NOT NULL
+);
+
+CREATE TABLE e7proveedor (
+  id            	INT PRIMARY KEY,
+  sucursal_id   	INT REFERENCES e7sucursal(id),
+  nombre        	VARCHAR2(35) NOT NULL
 );
 
 CREATE TABLE e7ingrediente (
   id            INT PRIMARY KEY,
   nombre        VARCHAR2(35) NOT NULL,
   inventario_id INT REFERENCES e7inventario(id),
+  proveedor_id  INT REFERENCES e7proveedor(id),
   precio        INT NOT NULL
 );
 
-CREATE TABLE e7proveedor (
-  id            	INT PRIMARY KEY,
-  sucursal_id   	INT REFERENCES e7sucursal(id),
-  nombre        	VARCHAR2(35) NOT NULL,
-  ingrediente_id 	INT REFERENCES e7ingrediente(id)
-);
 
 CREATE TABLE e7requisito_ingrediente (
   id              INT PRIMARY KEY,
