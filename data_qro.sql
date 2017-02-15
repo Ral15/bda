@@ -84,24 +84,24 @@ insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) value
 insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (18, 'salsa tomate', 18, 40.00, 8);
 
 --inventario
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (1, 1, 5000.00, 'I', 1);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (2, 1, 4000.00, 'I', 2);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (3, 1, 2000.00, 'I', 3);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (4, 1, 2000.00, 'I', 4);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (5, 1, 2000.00, 'I', 5);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (6, 1, 2000.00, 'I', 6);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (7, 1, 1000.00, 'I', 7);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (8, 1, 4000.00, 'I', 8);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (9, 1, 6000.00, 'I', 9);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (10, 1, 4000.00, 'I', 10);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (11, 1, 4000.00, 'I', 11);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (12, 1, 2000.00, 'I', 12);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (13, 1, 1000.00, 'I', 13);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (14, 1, 100.00, 'I', 14);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (15, 1, 100.00, 'I', 15);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (16, 1, 100.00, 'I', 16);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (17, 1, 100.00, 'I', 17);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (18, 1, 5000.00, 'I', 18);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (1, 2, 5000.00, 'I', 1);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (2, 2, 4000.00, 'I', 2);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (3, 2, 2000.00, 'I', 3);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (4, 2, 2000.00, 'I', 4);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (5, 2, 2000.00, 'I', 5);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (6, 2, 2000.00, 'I', 6);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (7, 2, 1000.00, 'I', 7);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (8, 2, 4000.00, 'I', 8);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (9, 2, 6000.00, 'I', 9);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (10, 2, 4000.00, 'I', 10);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (11, 2, 4000.00, 'I', 11);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (12, 2, 2000.00, 'I', 12);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (13, 2, 1000.00, 'I', 13);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (14, 2, 100.00, 'I', 14);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (15, 2, 100.00, 'I', 15);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (16, 2, 100.00, 'I', 16);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (17, 2, 100.00, 'I', 17);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (18, 2, 5000.00, 'I', 18);
 
 
 --producto
@@ -168,26 +168,3 @@ insert into e7requisito_ingrediente(id, producto_id, ingrediente_id, cantidad) v
 insert into e7requisito_ingrediente(id, producto_id, ingrediente_id, cantidad) values (seq_req_ingredientes.nextval, 7, 15, 1.00);
 --soda
 insert into e7requisito_ingrediente(id, producto_id, ingrediente_id, cantidad) values (seq_req_ingredientes.nextval, 8, 16, 1.00);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
