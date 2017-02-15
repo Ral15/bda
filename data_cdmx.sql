@@ -64,24 +64,24 @@ insert into e7proveedor(id, sucursal_id, nombre) values (7, 1, 'Cajas de México
 insert into e7proveedor(id, sucursal_id, nombre) values (8, 1, 'Aderezos de México');
 
 --ingredientes
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (1, 'harina', null, 50.00, 1);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (2, 'queso', null, 90.00, 2);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (3, 'pimiento', null, 45.00, 3);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (4, 'tomate', null, 10.00, 3);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (5, 'cebolla', null, 25.00, 3);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (6, 'champiñon', null, 30.00, 3);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (7, 'aceituna', null, 100.00, 3);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (8, 'tocino', null, 150.00, 5);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (9, 'pepperoni', null, 100.00, 5);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (10, 'carne res', null, 120.00, 5);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (11, 'jamon', null, 80.00, 5);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (12, 'piña', null, 15.00, 4);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (13, 'caja', null, 200.00, 7);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (14, 'limonada', null, 10.00, 6);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (15, 'naranjada', null, 10.00, 6);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (16, 'soda', null, 10.00, 6);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (17, 'agua', null, 9.00, 6);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (18, 'salsa tomate', null, 40.00, 8);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (1, 'harina', 50.00, 1);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (2, 'queso', 90.00, 2);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (3, 'pimiento', 45.00, 3);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (4, 'tomate', 10.00, 3);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (5, 'cebolla', 25.00, 3);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (6, 'champiñon', 30.00, 3);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (7, 'aceituna', 100.00, 3);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (8, 'tocino', 150.00, 5);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (9, 'pepperoni', 100.00, 5);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (10, 'carne res', 120.00, 5);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (11, 'jamon', 80.00, 5);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (12, 'piña', 15.00, 4);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (13, 'caja', 200.00, 7);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (14, 'limonada', 10.00, 6);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (15, 'naranjada', 10.00, 6);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (16, 'soda', 10.00, 6);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (17, 'agua', 9.00, 6);
+insert into e7ingrediente(id, nombre, precio, proveedor_id) values (18, 'salsa tomate', 40.00, 8);
 
 --inventario
 insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (1, 1, 5000.00, 'I', 1);

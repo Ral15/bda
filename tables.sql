@@ -92,7 +92,6 @@ CREATE TABLE e7proveedor (
 CREATE TABLE e7ingrediente (
   id            INT PRIMARY KEY,
   nombre        VARCHAR2(35) NOT NULL,
-  inventario_id INT REFERENCES e7inventario(id),
   proveedor_id  INT REFERENCES e7proveedor(id),
   precio        INT NOT NULL
 );
