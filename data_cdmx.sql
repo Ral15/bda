@@ -111,7 +111,7 @@ insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (
 insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (10, 1, 4000.00, 'I', 10);
 insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (11, 1, 4000.00, 'I', 11);
 insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (12, 1, 2000.00, 'I', 12);
-insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (13, 1, 1000.00, 'I', 13);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (13, 1, 100.00, 'I', 13);
 insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (14, 1, 100.00, 'I', 14);
 insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (15, 1, 100.00, 'I', 15);
 insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (16, 1, 100.00, 'I', 16);
@@ -140,6 +140,12 @@ insert into e7requisito_ingrediente (id, producto_id, ingrediente_id, cantidad) 
 insert into e7requisito_ingrediente (id, producto_id, ingrediente_id, cantidad) values (seq_req_ingredientes.nextval, 4, 1, 250.00);
 insert into e7requisito_ingrediente (id, producto_id, ingrediente_id, cantidad) values (seq_req_ingredientes.nextval, 5, 1, 250.00);
 
+--salsa tomate
+insert into e7requisito_ingrediente (id, producto_id, ingrediente_id, cantidad) values (seq_req_ingredientes.nextval, 1, 18, 100.00);
+insert into e7requisito_ingrediente (id, producto_id, ingrediente_id, cantidad) values (seq_req_ingredientes.nextval, 2, 18, 100.00);
+insert into e7requisito_ingrediente (id, producto_id, ingrediente_id, cantidad) values (seq_req_ingredientes.nextval, 3, 18, 100.00);
+insert into e7requisito_ingrediente (id, producto_id, ingrediente_id, cantidad) values (seq_req_ingredientes.nextval, 4, 18, 100.00);
+insert into e7requisito_ingrediente (id, producto_id, ingrediente_id, cantidad) values (seq_req_ingredientes.nextval, 5, 18, 100.00);
 
 -- queso
 insert into e7requisito_ingrediente (id, producto_id, ingrediente_id, cantidad) values (seq_req_ingredientes.nextval, 1, 2, 150.00);
