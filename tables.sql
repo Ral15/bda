@@ -46,7 +46,7 @@ CREATE TABLE e7cliente (
   id              INT PRIMARY KEY,
   sucursal_id     INT REFERENCES e7sucursal(id),
   nombre          VARCHAR2(35) NOT NULL,
-  telefono        VARCHAR2(35) NOT NULL,
+  telefono        VARCHAR2(17) NOT NULL,
   fecha_creacion  DATE DEFAULT (sysdate)
 );
 
