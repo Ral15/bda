@@ -1,0 +1,3 @@
+SLP = create database link slp connect to a1206630 identified by vScrVP9e using 'qro';
+CDMX = create database link cdmx connect to a512318 identified by bGb5WwdV using 'qro';
+QRO = create database link p_qro connect to a1171503 identified by tjYjMuMM using 'qro';
