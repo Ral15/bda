@@ -1,0 +1,16 @@
+CREATE OR REPLACE PROCEDURE COMPRARPROVEEDOR(
+  id_proveedor   IN NUMBER,
+  id_ingrediente IN NUMBER,
+  costo          IN NUMBER,
+  unidades       IN NUMBER
+) AS
+  BEGIN
+    UPDATE E7INVENTARIO
+    SET CANTIDAD = CANTIDAD + unidades
+    WHERE E7INVENTARIO.TIPO_ITEM = 'I'
+          AND E7INVENTARIO.ITEM_ID = id_ingrediente;
+    INSERT INTO E7COMPRA (ID, PROVEEDOR_ID, INGREDIENTE_ID, MONTO, CANTIDAD, FECHA_COMPRA)
+    VALUES (SEQ_COMPRA.nextval, id_proveedor, id_ingrediente, costo, unidades, SYSDATE);
+    COMMIT;
+
+  END COMPRARPROVEEDOR;
