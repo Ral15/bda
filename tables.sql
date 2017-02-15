@@ -16,13 +16,13 @@ CREATE TABLE e7producto (
   menu_id      INT REFERENCES e7menu(id),
   nombre       VARCHAR2(35) NOT NULL,
   descripcion  VARCHAR2(100) NOT NULL,
-  precio       NUMBER(5,2) NOT NULL
+  precio       NUMBER(19,2) NOT NULL
 );
 
 CREATE TABLE e7puesto (
   id              INT PRIMARY KEY,
   nombre_puesto   VARCHAR2(35) NOT NULL,
-  sueldo          NUMBER(10,2) NOT NULL
+  sueldo          NUMBER(19,2) NOT NULL
 );
 
 CREATE TABLE e7empleado (
@@ -37,7 +37,7 @@ CREATE TABLE e7empleado (
 CREATE TABLE e7nomina (
   id              INT PRIMARY KEY,
   empleado_id     INT REFERENCES e7empleado(id),
-  monto           NUMBER(5,2) NOT NULL,
+  monto           NUMBER(19,2) NOT NULL,
   fecha_creacion  DATE DEFAULT (sysdate)
 );
 
@@ -55,7 +55,7 @@ CREATE TABLE e7venta (
   sucursal_id   INT REFERENCES e7sucursal(id),
   empleado_id   INT REFERENCES e7empleado(id),
   cliente_id    INT REFERENCES e7cliente(id),
-  monto         NUMBER(5,2) NOT NULL,
+  monto         NUMBER(19,2) NOT NULL,
   fecha_venta   DATE DEFAULT (sysdate)
 );
 
@@ -102,7 +102,7 @@ CREATE TABLE e7requisito_ingrediente (
   id              INT PRIMARY KEY,
   producto_id     INT REFERENCES e7producto(id),
   ingrediente_id  INT REFERENCES e7ingrediente(id),
-  cantidad        NUMBER(5) NOT NULL
+  cantidad        NUMBER(10) NOT NULL
 );
 
 CREATE TABLE e7merma (
@@ -116,7 +116,7 @@ CREATE TABLE e7compra (
   id               INT PRIMARY KEY,
   proveedor_id     INT REFERENCES e7proveedor(id),
   ingrediente_id   INT REFERENCES e7ingrediente(id),
-  monto            NUMBER(5,2) NOT NULL,
+  monto            NUMBER(19,2) NOT NULL,
   cantidad         INT NOT NULL,
   fecha_compra     DATE DEFAULT (sysdate)
 );

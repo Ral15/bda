@@ -108,7 +108,7 @@ insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (
 insert into e7producto (id, menu_id, nombre, precio, descripcion) values (1, 1, 'Pizza de pepperoni', 80.00, 'Pizza con deliciosos pepperonis');
 insert into e7producto (id, menu_id, nombre, precio, descripcion) values (2, 1, 'Pizza de queso', 80.00, 'Pizza con doble queso');
 insert into e7producto (id, menu_id, nombre, precio, descripcion) values (3, 1, 'Pizza hawaiana', 90.00, 'Pizza con piña y jamon');
-insert into e7producto (id, menu_id, nombre, precio, descripcion) values (4, 1, 'Pizza de italiana', 100.00, 'Pizza con champiñon, carne de res, aceitunas y pimientos')
+insert into e7producto (id, menu_id, nombre, precio, descripcion) values (4, 1, 'Pizza de italiana', 100.00, 'Pizza con champiñon, carne de res, aceitunas y pimientos');
 insert into e7producto (id, menu_id, nombre, precio, descripcion) values (5, 1, 'Pizza de tocino', 90.00, 'Pizza con deliciosos trozos de tocino');
 insert into e7producto (id, menu_id, nombre, precio, descripcion) values (6, 1, 'Limonada', 15.00, 'Deliciosa limonada fresca');
 insert into e7producto (id, menu_id, nombre, precio, descripcion) values (7, 1, 'Naranjada', 15.00, 'Deliciosa naranjada fresca');
