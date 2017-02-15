@@ -18,12 +18,12 @@ insert into e7puesto (id, nombre_puesto, sueldo) values (4, 'Cocina', 8000.00);
 
 
 --empleado
-insert into e7empleado (id, sucursal_id, puesto_id, nombre, apellido, telefono) values (1, 2, 1, 'Timothy', 'Diaz', '21509-6621');
-insert into e7empleado (id, sucursal_id, puesto_id, nombre, apellido, telefono) values (2, 2, 2, 'Harold', 'Ellis', '9960-0547');
-insert into e7empleado (id, sucursal_id, puesto_id, nombre, apellido, telefono) values (3, 2, 2, 'Timothy', 'Kim', '488-1059');
-insert into e7empleado (id, sucursal_id, puesto_id, nombre, apellido, telefono) values (4, 2, 3, 'Jerry', 'Pierce', '6677-6087');
-insert into e7empleado (id, sucursal_id, puesto_id, nombre, apellido, telefono) values (5, 2, 4, 'Evelyn', 'Gardner', '408-1026');
-insert into e7empleado (id, sucursal_id, puesto_id, nombre, apellido, telefono) values (6, 2, 4, 'Billy', 'Cook', '6947-7127');
+insert into e7empleado (id, sucursal_id, puesto_id, nombre, apellido, telefono) values (1, 1, 1, 'Timothy', 'Diaz', '21509-6621');
+insert into e7empleado (id, sucursal_id, puesto_id, nombre, apellido, telefono) values (2, 1, 2, 'Harold', 'Ellis', '9960-0547');
+insert into e7empleado (id, sucursal_id, puesto_id, nombre, apellido, telefono) values (3, 1, 2, 'Timothy', 'Kim', '488-1059');
+insert into e7empleado (id, sucursal_id, puesto_id, nombre, apellido, telefono) values (4, 1, 3, 'Jerry', 'Pierce', '6677-6087');
+insert into e7empleado (id, sucursal_id, puesto_id, nombre, apellido, telefono) values (5, 1, 4, 'Evelyn', 'Gardner', '408-1026');
+insert into e7empleado (id, sucursal_id, puesto_id, nombre, apellido, telefono) values (6, 1, 4, 'Billy', 'Cook', '6947-7127');
 
 
 -- nomina **monto, empleado_id
@@ -36,52 +36,52 @@ insert into e7nomina (id, empleado_id, monto) values (6, 6, 8000.00);
 
 
 --cliente
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (1, 'David', '7-(156)226-8173', 2);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (2, 'Marie', '63-(588)479-6091', 2);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (3, 'Jimmy', '60-(107)793-8677', 2);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (4, 'Mark', '39-(337)769-3952', 2);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (5, 'Elizabeth', '62-(392)381-0772', 2);
+insert into e7cliente (id, nombre, telefono, sucursal_id) values (1, 'David', '7-(156)226-8173', 1);
+insert into e7cliente (id, nombre, telefono, sucursal_id) values (2, 'Marie', '63-(588)479-6091', 1);
+insert into e7cliente (id, nombre, telefono, sucursal_id) values (3, 'Jimmy', '60-(107)793-8677', 1);
+insert into e7cliente (id, nombre, telefono, sucursal_id) values (4, 'Mark', '39-(337)769-3952', 1);
+insert into e7cliente (id, nombre, telefono, sucursal_id) values (5, 'Elizabeth', '62-(392)381-0772', 1);
 
 --gasto **gasto_id
 -- insert into e7gasto(id, sucursal_id, tipo_gasto, gasto_id) values (seq_gasto.nextval, 11, 'N', null);
 
 
 --menu
-insert into e7menu(id, sucursal_id) values (seq_menu.nextval, 2);
+insert into e7menu(id, sucursal_id) values (seq_menu.nextval, 1);
 
 --venta
 -- insert into e7venta(id, empleado_id, sucursal_id, cliente_id, monto) values (seq_venta.nextval, null, null, null, 100);
 
 
 --proveedor **ingrediente id
-insert into e7proveedor(id, sucursal_id, nombre) values (1, 2, 'Harinas de México');
-insert into e7proveedor(id, sucursal_id, nombre) values (2, 2, 'Lacteos de México');
-insert into e7proveedor(id, sucursal_id, nombre) values (3, 2, 'Verduras de México');
-insert into e7proveedor(id, sucursal_id, nombre) values (4, 2, 'Frutas de México');
-insert into e7proveedor(id, sucursal_id, nombre) values (5, 2, 'Carnes Frías de México');
-insert into e7proveedor(id, sucursal_id, nombre) values (6, 2, 'Bebidas de México');
-insert into e7proveedor(id, sucursal_id, nombre) values (7, 2, 'Cajas de México');
-insert into e7proveedor(id, sucursal_id, nombre) values (8, 2, 'Aderezos de México');
+insert into e7proveedor(id, sucursal_id, nombre) values (1, 1, 'Harinas de México');
+insert into e7proveedor(id, sucursal_id, nombre) values (2, 1, 'Lacteos de México');
+insert into e7proveedor(id, sucursal_id, nombre) values (3, 1, 'Verduras de México');
+insert into e7proveedor(id, sucursal_id, nombre) values (4, 1, 'Frutas de México');
+insert into e7proveedor(id, sucursal_id, nombre) values (5, 1, 'Carnes Frías de México');
+insert into e7proveedor(id, sucursal_id, nombre) values (6, 1, 'Bebidas de México');
+insert into e7proveedor(id, sucursal_id, nombre) values (7, 1, 'Cajas de México');
+insert into e7proveedor(id, sucursal_id, nombre) values (8, 1, 'Aderezos de México');
 
 --ingredientes
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (1, 'harina', 1, 50.00, 1);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (2, 'queso', 2 90.00, 2);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (3, 'pimiento', 3, 45.00, 3);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (4, 'tomate', 4, 10.00, 3);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (5, 'cebolla', 5, 25.00, 3);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (6, 'champiñon', 6, 30.00, 3);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (7, 'aceituna', 7, 100.00, 3);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (8, 'tocino', 8, 150.00, 5);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (9, 'pepperoni', 9, 100.00, 5);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (10, 'carne res', 10, 120.00, 5);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (11, 'jamon', 11, 80.00, 5);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (12, 'piña', 12, 15.00, 4);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (13, 'caja', 13, 200.00, 7);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (14, 'limonada', 14, 10.00, 6);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (15, 'naranjada', 15, 10.00, 6);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (16, 'soda', 16, 10.00, 6);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (17, 'agua', 17, 9.00, 6);
-insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (18, 'salsa tomate', 18, 40.00, 8);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (1, 'harina', null, 50.00, 1);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (2, 'queso', null, 90.00, 2);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (3, 'pimiento', null, 45.00, 3);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (4, 'tomate', null, 10.00, 3);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (5, 'cebolla', null, 25.00, 3);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (6, 'champiñon', null, 30.00, 3);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (7, 'aceituna', null, 100.00, 3);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (8, 'tocino', null, 150.00, 5);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (9, 'pepperoni', null, 100.00, 5);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (10, 'carne res', null, 120.00, 5);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (11, 'jamon', null, 80.00, 5);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (12, 'piña', null, 15.00, 4);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (13, 'caja', null, 200.00, 7);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (14, 'limonada', null, 10.00, 6);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (15, 'naranjada', null, 10.00, 6);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (16, 'soda', null, 10.00, 6);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (17, 'agua', null, 9.00, 6);
+insert into e7ingrediente(id, nombre, inventario_id, precio, proveedor_id) values (18, 'salsa tomate', null, 40.00, 8);
 
 --inventario
 insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (1, 1, 5000.00, 'I', 1);
