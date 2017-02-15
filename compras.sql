@@ -16,69 +16,69 @@ insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values 
 insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 3, 3, 45, 1000);
 
 -- tomate --
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 4, 4, 10, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 4, 4, 10, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 3, 4, 10, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 3, 4, 10, 1000);
 
 -- cebolla --
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 5, 25, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 5, 25, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 3, 5, 25, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 3, 5, 25, 1000);
 
 -- champiñon --
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 6, 6, 30, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 6, 6, 30, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 3, 6, 30, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 3, 6, 30, 1000);
 
 --aceituna --
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 7, 7, 10, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 3, 7, 10, 1000);
 
 -- tocino --
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 8, 8, 150, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 8, 8, 150, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 8, 8, 150, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 8, 8, 150, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 8, 150, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 8, 150, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 8, 150, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 8, 150, 1000);
 
 -- pepperoni --
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 9, 9, 100, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 9, 9, 100, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 9, 9, 100, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 9, 9, 100, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 9, 9, 100, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 9, 9, 100, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 9, 100, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 9, 100, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 9, 100, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 9, 100, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 9, 100, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 9, 100, 1000);
 
 -- carne res --
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 10, 10, 120, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 10, 10, 120, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 10, 10, 120, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 10, 10, 120, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 10, 120, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 10, 120, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 10, 120, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 10, 120, 1000);
 
 -- jamon -- 
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 11, 11, 80, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 11, 11, 80, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 11, 11, 80, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 11, 11, 80, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 11, 80, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 11, 80, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 11, 80, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 5, 11, 80, 1000);
 
 -- piña --
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 12, 12, 15, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 12, 12, 15, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 4, 12, 15, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 4, 12, 15, 1000);
 
 -- caja --
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 13, 13, 200, 100);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 7, 13, 200, 100);
 
 -- limonada --
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 14, 14, 10, 100);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 6, 14, 10, 100);
 
 -- naranja --
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 15, 15, 10, 100);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 6, 15, 10, 100);
 
 -- soda --
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 16, 16, 10, 100);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 6, 16, 10, 100);
 
 -- agua --
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 17, 17, 9, 100);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 6, 17, 9, 100);
 
 -- salsa tomate --
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 18, 18, 40, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 18, 18, 40, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 18, 18, 40, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 18, 18, 40, 1000);
-insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 18, 18, 40, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 8, 18, 40, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 8, 18, 40, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 8, 18, 40, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 8, 18, 40, 1000);
+insert into e7compra (id, proveedor_id, ingrediente_id, monto, cantidad) values (seq_compra.nextval, 8, 18, 40, 1000);
 
