@@ -1,4 +1,4 @@
-CREATE TABLE e7sucursal (
+﻿CREATE TABLE e7sucursal (
   id         INT PRIMARY KEY,
   nombre     VARCHAR2(35) NOT NULL,
   ubicacion  VARCHAR2(35) NOT NULL,
