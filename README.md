@@ -4,17 +4,40 @@
 
 ### Create structure
 #### Load tables
-1. table_management_/tables.sql
+* table_management_/tables.sql
 
 #### Load sequences
-2. secuences/sequences.sql
+* secuences/sequences.sql
 
-### Load data depending on the "sucursal" you want
+### Load inital data depending on the "sucursal" you want
 #### CDMX
-3. data_set/sucursal_cdmx.sql
+* data_set/sucursal_cdmx.sql
 
 #### QRO
-3. data_set/sucursal_qro.sql
+* data_set/sucursal_qro.sql
 
 #### SLP
-3. data_set/sucursal_qro.sql
+* data_set/sucursal_qro.sql
+
+### Load ventas data depending on the "sucursal" you want
+#### CDMX
+* data_set/ventas_cdmx.sql
+
+#### QRO
+* data_set/ventas_qro.sql
+
+#### SLP
+* data_set/ventas_slp.sql
+
+### Load compras script for 3 of the sucursales
+* data_set/compras.sql
+
+### Load ventas script for 3 of the sucursales, change s_id depending of the sucursal
+
+#### CDMX = 1
+
+#### QRO = 2
+
+#### SLP = 3
+
+* data_set/ventas.sql
