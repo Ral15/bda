@@ -9,4 +9,9 @@
 2. secuences/sequences.sql
 
 ### Load data depending on the "sucursal" you want
+#### CDMX
 3. data_set/sucursal_cdmx.sql
+#### QRO
+3. data_set/sucursal_qro.sql
+#### SLP
+3. data_set/sucursal_qro.sql
