@@ -5,7 +5,8 @@
 ### Create structure
 #### Load tables
 1. table_management_/tables.sql
-#### Load sequences
+
+### Load sequences
 2. secuences/sequences.sql
 
 ### Load data depending on the "sucursal" you want
