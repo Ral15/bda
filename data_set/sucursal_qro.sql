@@ -117,7 +117,15 @@ insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (
 insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (16, 2, 100.00, 'I', 16);
 insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (17, 2, 100.00, 'I', 17);
 insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (18, 2, 5000.00, 'I', 18);
-
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (19, 2, 10, 'P', 1);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (20, 2, 10, 'P', 2);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (21, 2, 10, 'P', 3);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (22, 2, 10, 'P', 4);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (23, 2, 10, 'P', 5);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (24, 2, 10, 'P', 6);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (25, 2, 10, 'P', 7);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (26, 2, 10, 'P', 8);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (27, 2, 10, 'P', 9);
 
 --producto
 insert into e7producto (id, menu_id, nombre, precio, descripcion) values (1, 1, 'Pizza de pepperoni', 80.00, 'Pizza con deliciosos pepperonis');

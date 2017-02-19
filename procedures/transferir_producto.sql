@@ -11,7 +11,7 @@ CREATE OR REPLACE PROCEDURE TRANSFERIRPRODUCTO
       --sacar cantidad del productos
       select cantidad into cantidad_del_otro 
       from e7inventario@cdmx
-      where e7inventario.item_id@cdmx = item_idd;
+      where e7inventario.item_id@cdmx = item_idd and e7inventario.tipo_item@cdmx = 'P';
 
       -- si no tiene suficiente cantidad para darme
       IF cantidad_del_otro <= cantidad_quiero THEN
@@ -27,9 +27,6 @@ CREATE OR REPLACE PROCEDURE TRANSFERIRPRODUCTO
         set cantidad = cantidad + cantidad_quiero
         where item_id = item_idd;
 
-        -- guardar operacion
-        insert into 
-
         COMMIT;
       END IF;
     -- -- QRO
@@ -37,7 +34,7 @@ CREATE OR REPLACE PROCEDURE TRANSFERIRPRODUCTO
       --sacar cantidad del item
       select cantidad into cantidad_del_otro 
       from e7inventario@p_qro
-      where e7inventario.item_id@p_qro = item_idd;
+      where e7inventario.item_id@p_qro = item_idd and e7inventario.tipo_item@p_qro = 'P';
 
       -- si no tiene suficiente cantidad para darme
       IF cantidad_del_otro <= cantidad_quiero THEN
@@ -60,7 +57,7 @@ CREATE OR REPLACE PROCEDURE TRANSFERIRPRODUCTO
       --sacar cantidad del item
       select cantidad into cantidad_del_otro 
       from e7inventario@slp
-      where e7inventario.item_id@slp = item_idd;
+      where e7inventario.item_id@slp = item_idd and e7inventario.tipo_item@slp = 'P';
 
       -- si no tiene suficiente cantidad para darme
       IF cantidad_del_otro <= cantidad_quiero THEN

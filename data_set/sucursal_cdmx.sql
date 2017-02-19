@@ -117,6 +117,15 @@ insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (
 insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (16, 1, 100.00, 'I', 16);
 insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (17, 1, 100.00, 'I', 17);
 insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (18, 1, 5000.00, 'I', 18);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (19, 1, 10, 'P', 1);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (20, 1, 10, 'P', 2);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (21, 1, 10, 'P', 3);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (22, 1, 10, 'P', 4);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (23, 1, 10, 'P', 5);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (24, 1, 10, 'P', 6);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (25, 1, 10, 'P', 7);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (26, 1, 10, 'P', 8);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (27, 1, 10, 'P', 9);
 
 
 --producto
