@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE TRANSFERIRINGREDIENTE
+CREATE OR REPLACE PROCEDURE TRANSFERIRPRODUCTO
   (
     id_sucursal_destino IN NUMBER,
     item_idd             IN NUMBER,
@@ -8,7 +8,7 @@ CREATE OR REPLACE PROCEDURE TRANSFERIRINGREDIENTE
   BEGIN
     -- CDMX
     IF id_sucursal_destino = 1 THEN
-      --sacar cantidad del item
+      --sacar cantidad del productos
       select cantidad into cantidad_del_otro 
       from e7inventario@cdmx
       where e7inventario.item_id@cdmx = item_idd;
@@ -26,6 +26,10 @@ CREATE OR REPLACE PROCEDURE TRANSFERIRINGREDIENTE
         update e7inventario
         set cantidad = cantidad + cantidad_quiero
         where item_id = item_idd;
+
+        -- guardar operacion
+        insert into 
+
         COMMIT;
       END IF;
     -- -- QRO
@@ -77,4 +81,4 @@ CREATE OR REPLACE PROCEDURE TRANSFERIRINGREDIENTE
     ELSE
       RAISE_APPLICATION_ERROR(-20000, 'parametros invalidos, verificar');
     END IF;
-END TRANSFERIRINGREDIENTE;
+END TRANSFERIRPRODUCTO;
