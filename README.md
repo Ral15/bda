@@ -61,3 +61,4 @@ In order to sucessfully create the project, the following scripts must be loaded
 ### 8. Load transactions
 * procedures/transferir_empleado.sql
 * procedures/transferir_ingredientes.sql
+* procedures/transferir_producto.sql
