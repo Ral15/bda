@@ -21,13 +21,13 @@ In order to sucessfully create the project, the following scripts must be loaded
 
 ### 3. Load ventas data depending on the "sucursal" you want
 #### 3.1 CDMX
-* data_set/ventas_cdmx.sql
+* data_set/ventas_cdmx_script.sql
 
 #### 3.2 QRO
-* data_set/ventas_qro.sql
+* data_set/ventas_qro_script.sql
 
 #### 3.3 SLP
-* data_set/ventas_slp.sql
+* data_set/ventas_slp_script.sql
 
 ### 4. Load compras script for 3 of the sucursales
 * data_set/compras.sql
