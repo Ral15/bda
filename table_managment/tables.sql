@@ -31,7 +31,8 @@ CREATE TABLE e7empleado (
   puesto_id    INT REFERENCES e7puesto(id),
   nombre       VARCHAR2(35) NOT NULL,
   apellido     VARCHAR2(35) NOT NULL,
-  telefono     VARCHAR2(10) NOT NULL
+  telefono     VARCHAR2(10) NOT NULL,
+  fecha_creacion DATE DEFAULT (sysdate)
 );
 
 CREATE TABLE e7nomina (
@@ -107,7 +108,8 @@ CREATE TABLE e7requisito_ingrediente (
 CREATE TABLE e7merma (
   id           INT PRIMARY KEY,
   producto_id  INT REFERENCES e7producto(id),
-  descripcion  VARCHAR2(100) NOT NULL
+  descripcion  VARCHAR2(100) NOT NULL,
+  fecha_creacion DATE DEFAULT (sysdate)
 );
 
 
