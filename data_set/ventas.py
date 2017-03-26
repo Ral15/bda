@@ -93,7 +93,7 @@ for single_date in daterange(start_date, end_date):
     for s in range(1, sells):
         m = randint(0, len(monto) - 1)
         # empleado_id
-        e_id = randint(1, 6)
+        e_id = randint(1, 3)
         #cliente_id
         c_id = randint(1, 20)
         if monto[m] == '180':
