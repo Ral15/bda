@@ -36,26 +36,26 @@ insert into e7nomina (id, empleado_id, monto) values (6, 6, 8000.00);
 
 
 --cliente
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (1, 'Paula', '86-(359)498-4894', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (2, 'Frank', '48-(472)620-8352', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (3, 'Philip', '358-(408)867-5098', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (4, 'Beverly', '86-(100)651-4654', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (5, 'Ann', '7-(949)145-1521', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (6, 'Thomas', '55-(470)440-5953', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (7, 'Carl', '54-(980)394-3552', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (8, 'Harry', '1-(407)165-5314', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (9, 'Joyce', '1-(858)150-4572', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (10, 'Jane', '63-(133)223-6809', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (11, 'Janet', '7-(970)470-7337', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (12, 'Timothy', '62-(864)107-7430', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (13, 'Roy', '55-(789)436-3303', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (14, 'Todd', '86-(114)535-4353', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (15, 'Lois', '1-(301)593-6244', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (16, 'Nicholas', '380-(891)253-6928', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (17, 'Judy', '27-(891)909-6310', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (18, 'Paula', '57-(968)768-0743', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (19, 'Ruby', '970-(267)874-6977', 3);
-insert into e7cliente (id, nombre, telefono, sucursal_id) values (20, 'Andrea', '63-(458)777-1936', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (1, 'Paula', '86-(359)498-4894', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (2, 'Frank', '48-(472)620-8352', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (3, 'Philip', '358-(408)867-5098', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (4, 'Beverly', '86-(100)651-4654', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (5, 'Ann', '7-(949)145-1521', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (6, 'Thomas', '55-(470)440-5953', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (7, 'Carl', '54-(980)394-3552', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (8, 'Harry', '1-(407)165-5314', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (9, 'Joyce', '1-(858)150-4572', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (10, 'Jane', '63-(133)223-6809', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (11, 'Janet', '7-(970)470-7337', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (12, 'Timothy', '62-(864)107-7430', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (13, 'Roy', '55-(789)436-3303', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (14, 'Todd', '86-(114)535-4353', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (15, 'Lois', '1-(301)593-6244', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (16, 'Nicholas', '380-(891)253-6928', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (17, 'Judy', '27-(891)909-6310', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (18, 'Paula', '57-(968)768-0743', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (19, 'Ruby', '970-(267)874-6977', 3);
+-- insert into e7cliente (id, nombre, telefono, sucursal_id) values (20, 'Andrea', '63-(458)777-1936', 3);
 
 --gasto **gasto_id
 -- insert into e7gasto(id, sucursal_id, tipo_gasto, gasto_id) values (seq_gasto.nextval, 11, 'N', null);
@@ -117,6 +117,15 @@ insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (
 insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (16, 3, 100.00, 'I', 16);
 insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (17, 3, 100.00, 'I', 17);
 insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (18, 3, 5000.00, 'I', 18);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (19, 3, 10, 'P', 1);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (20, 3, 10, 'P', 2);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (21, 3, 10, 'P', 3);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (22, 3, 10, 'P', 4);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (23, 3, 10, 'P', 5);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (24, 3, 10, 'P', 6);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (25, 3, 10, 'P', 7);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (26, 3, 10, 'P', 8);
+insert into e7inventario(id, sucursal_id, cantidad, tipo_item, item_id) values (27, 3, 10, 'P', 9);
 
 
 --producto
