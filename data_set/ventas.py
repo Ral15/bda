@@ -1,5 +1,5 @@
 # open file change name of file
-myFile = open('./ventas_slp_script.sql','w+')
+myFile = open('./ventas_qro_script.sql','w+')
 from random import randint
 from datetime import timedelta, date
 
@@ -88,14 +88,14 @@ for single_date in daterange(start_date, end_date):
     #day
     d = single_date.strftime("%Y/%m/%d")
     #number of sells in a day
-    sells = randint(20, 50)
+    sells = randint(100, 150)
     accum += sells
     for s in range(1, sells):
         m = randint(0, len(monto) - 1)
         # empleado_id
         e_id = randint(1, 3)
         #cliente_id
-        c_id = randint(1, 20)
+        c_id = randint(1, 1000)
         if monto[m] == '180':
             p = randint(0, len(producto_180) - 1)
             myFile.write("insert into e7venta (id, empleado_id, sucursal_id, cliente_id, monto, fecha_venta) values (" + str(i) + ", " + str(e_id) + ", 1, " + str(c_id) + ", 180, TO_DATE('" + d + "', 'YYYY/MM/DD'));\n")
