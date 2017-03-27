@@ -1,0 +1,669 @@
+//Vista productos:
+
+CREATE VIEW PRODUCTOS
+AS
+  SELECT
+    E7PRODUCTO.ID AS ID,
+    E7PRODUCTO.MENU_ID AS MENU_ID,
+    E7PRODUCTO.NOMBRE AS NOMBRE,
+    E7PRODUCTO.DESCRIPCION AS DESCRIPCION,
+    E7PRODUCTO.PRECIO AS PRECIO
+  FROM E7PRODUCTO@CDMX
+  UNION
+  SELECT
+    E7PRODUCTO.ID AS ID,
+    E7PRODUCTO.MENU_ID AS MENU_ID,
+    E7PRODUCTO.NOMBRE AS NOMBRE,
+    E7PRODUCTO.DESCRIPCION AS DESCRIPCION,
+    E7PRODUCTO.PRECIO AS PRECIO
+  FROM E7PRODUCTO@P_QRO
+  UNION
+  SELECT
+    E7PRODUCTO.ID AS ID,
+    E7PRODUCTO.MENU_ID AS MENU_ID,
+    E7PRODUCTO.NOMBRE AS NOMBRE,
+    E7PRODUCTO.DESCRIPCION AS DESCRIPCION,
+    E7PRODUCTO.PRECIO AS PRECIO
+  FROM E7PRODUCTO@SLP;
+
+//VISTA EMPLEADOS:
+
+CREATE VIEW EMPLEADOS
+AS
+  SELECT
+    E7EMPLEADO.ID AS ID,
+    E7EMPLEADO.SUCURSAL_ID AS SUCURSAL_ID,
+    E7EMPLEADO.PUESTO_ID AS PUESTO_ID,
+    E7EMPLEADO.NOMBRE AS NOMBRE,
+    E7EMPLEADO.APELLIDO AS APELLIDO,
+    E7EMPLEADO.TELEFONO AS TELEFONO
+  FROM E7EMPLEADO@CDMX
+  UNION
+  SELECT
+    E7EMPLEADO.ID AS ID,
+    E7EMPLEADO.SUCURSAL_ID AS SUCURSAL_ID,
+    E7EMPLEADO.PUESTO_ID AS PUESTO_ID,
+    E7EMPLEADO.NOMBRE AS NOMBRE,
+    E7EMPLEADO.APELLIDO AS APELLIDO,
+    E7EMPLEADO.TELEFONO AS TELEFONO
+  FROM E7EMPLEADO@P_QRO
+  UNION
+  SELECT
+    E7EMPLEADO.ID AS ID,
+    E7EMPLEADO.SUCURSAL_ID AS SUCURSAL_ID,
+    E7EMPLEADO.PUESTO_ID AS PUESTO_ID,
+    E7EMPLEADO.NOMBRE AS NOMBRE,
+    E7EMPLEADO.APELLIDO AS APELLIDO,
+    E7EMPLEADO.TELEFONO AS TELEFONO
+  FROM E7EMPLEADO@SLP;
+
+//VISTA CLIENTES:
+
+CREATE VIEW CLIENTES
+AS
+  SELECT *
+  FROM E7CLIENTE@CDMX
+  UNION
+  SELECT *
+  FROM E7CLIENTE@P_QRO
+  UNION
+  SELECT *
+  FROM E7CLIENTE@SLP;
+
+//VISTA SUCURSALES:
+
+CREATE VIEW SUCURSALES
+AS
+  SELECT
+    E7SUCURSAL.ID AS ID,
+    E7SUCURSAL.NOMBRE AS NOMBRE,
+    E7SUCURSAL.UBICACION AS UBICACION,
+    E7SUCURSAL.TELEFONO AS TELEFONO,
+    E7SUCURSAL.HORARIO AS HORARIO
+  FROM E7SUCURSAL@CDMX
+  UNION
+  SELECT
+    E7SUCURSAL.ID AS ID,
+    E7SUCURSAL.NOMBRE AS NOMBRE,
+    E7SUCURSAL.UBICACION AS UBICACION,
+    E7SUCURSAL.TELEFONO AS TELEFONO,
+    E7SUCURSAL.HORARIO AS HORARIO
+  FROM E7SUCURSAL@P_QRO
+  UNION
+  SELECT
+    E7SUCURSAL.ID AS ID,
+    E7SUCURSAL.NOMBRE AS NOMBRE,
+    E7SUCURSAL.UBICACION AS UBICACION,
+    E7SUCURSAL.TELEFONO AS TELEFONO,
+    E7SUCURSAL.HORARIO AS HORARIO
+  FROM E7SUCURSAL@SLP;
+
+
+//VISTA PROVEEDORES:
+
+CREATE VIEW PROVEEDORES
+AS
+  SELECT
+    E7PROVEEDOR.ID AS ID,
+    E7PROVEEDOR.SUCURSAL_ID AS SUCURSAL_ID,
+    E7PROVEEDOR.NOMBRE AS NOMBRE
+  FROM E7PROVEEDOR@CDMX
+  UNION
+  SELECT
+    E7PROVEEDOR.ID AS ID,
+    E7PROVEEDOR.SUCURSAL_ID AS SUCURSAL_ID,
+    E7PROVEEDOR.NOMBRE AS NOMBRE
+  FROM E7PROVEEDOR@P_QRO
+  UNION
+  SELECT
+    E7PROVEEDOR.ID AS ID,
+    E7PROVEEDOR.SUCURSAL_ID AS SUCURSAL_ID,
+    E7PROVEEDOR.NOMBRE AS NOMBRE
+  FROM E7PROVEEDOR@SLP;
+
+
+//VISTA VENTAS:
+
+CREATE VIEW VENTAS
+AS
+SELECT PRODUCTO_ID, SUCURSAL_ID, EMPLEADO_ID, CLIENTE_ID, MONTO, FECHA_VENTA, VENTA_ID
+FROM E7VENTA@CDMX V, E7ORDEN@CDMX O
+WHERE V.ID = O.VENTA_ID
+UNION
+SELECT PRODUCTO_ID, SUCURSAL_ID, EMPLEADO_ID, CLIENTE_ID, MONTO, FECHA_VENTA, VENTA_ID
+FROM E7VENTA@P_QRO V, E7ORDEN@P_QRO O
+WHERE V.ID = O.VENTA_ID
+UNION
+SELECT PRODUCTO_ID, SUCURSAL_ID, EMPLEADO_ID, CLIENTE_ID, MONTO, FECHA_VENTA, VENTA_ID
+FROM E7VENTA@SLP V, E7ORDEN@SLP O
+WHERE V.ID = O.VENTA_ID
+ORDER BY FECHA_VENTA;
+
+//VISTA PUESTOS:
+
+CREATE VIEW PUESTOS
+AS
+  SELECT
+    E7PUESTO.ID AS ID,
+    E7PUESTO.NOMBRE_PUESTO AS NOMBRE_PUESTO,
+    E7PUESTO.SUELDO AS SUELDO
+  FROM E7PUESTO@CDMX
+  UNION
+  SELECT
+    E7PUESTO.ID AS ID,
+    E7PUESTO.NOMBRE_PUESTO AS NOMBRE_PUESTO,
+    E7PUESTO.SUELDO AS SUELDO
+  FROM E7PUESTO@P_QRO
+  UNION
+  SELECT
+    E7PUESTO.ID AS ID,
+    E7PUESTO.NOMBRE_PUESTO AS NOMBRE_PUESTO,
+    E7PUESTO.SUELDO AS SUELDO
+  FROM E7PUESTO@SLP;
+
+
+//PDIMTIEMPO:
+
+create or replace PROCEDURE PDIMTIEMPO (
+FECHAINICIAL IN DATE,
+FECHAFINAL IN DATE
+)AS
+VFECHAINICIAL DATE;
+VFECHAFINAL DATE;
+V_NUMDIAS NUMBER;
+VANIO VARCHAR2(4);
+VMES VARCHAR2(10);
+VDIA NUMBER;
+VNUMEROSEMANA NUMBER;
+BEGIN
+  VFECHAINICIAL := FECHAINICIAL;
+  VFECHAFINAL := FECHAFINAL;
+  V_NUMDIAS := VFECHAFINAL - VFECHAINICIAL;
+  
+  FOR CONTADOR IN 1..V_NUMDIAS
+  LOOP
+  VANIO := TO_CHAR(VFECHAINICIAL, 'YYYY');
+  VMES := TO_CHAR(VFECHAINICIAL, 'MONTH');
+  VDIA := TO_NUMBER(TO_CHAR(VFECHAINICIAL, 'DD'));
+  VNUMEROSEMANA := TO_NUMBER(TO_CHAR(VFECHAINICIAL + 2, 'IW'));
+  INSERT INTO D_TIEMPO VALUES (CONTADOR, VFECHAINICIAL, VANIO, VMES, VDIA, VNUMEROSEMANA);
+  COMMIT;
+  VFECHAINICIAL := VFECHAINICIAL+1;
+  END LOOP;
+END PDIMTIEMPO;
+
+
+//ACTUALIZA_EMPLEADO:
+
+create or replace PROCEDURE ACTUALIZA_EMPLEADO AS 
+BEGIN
+  insert into D_EMPLEADO
+  select seq_d_empleado.nextval, nombre, apellido, nombre_puesto, sueldo, e.ID
+  from empleados e, puestos p
+  where e.puesto_id = p.id
+  and e.id not in (select IDE from D_EMPLEADO);
+END ACTUALIZA_EMPLEADO;
+
+//ACTUALIZA_PRODUCTO:
+
+create or replace PROCEDURE ACTUALIZA_PRODUCTO AS 
+BEGIN
+  insert into D_PRODUCTO
+  select seq_d_producto.nextval, nombre, descripcion, precio
+  from productos p
+  where p.id not in (select DPRODPK from D_PRODUCTO);
+END ACTUALIZA_PRODUCTO;
+
+//ACTUALIZA_SUCURSAL:
+
+create or replace PROCEDURE ACTUALIZA_SUCURSAL AS 
+BEGIN
+  insert into D_SUCURSAL
+  select seq_d_ubicacion.nextval, nombre, ubicacion
+  from sucursales s
+  where s.id not in (select DUBIPK from D_SUCURSAL);
+END ACTUALIZA_SUCURSAL;
+
+//ACTUALIZA_VENTASEMPLEADO
+
+
+create or replace PROCEDURE ACTUALIZA_VENTASEMPLEADO
+(
+ FECHAINICIAL IN DATE, 
+ FECHAFINAL IN DATE
+) AS
+ vFechaInicial date;
+ vFechaFinal date;
+ vDPRODPK number;
+ vDEMPLEADOPK number;
+ vdTiempoPk number;
+ v_MONTOVENTAS number;
+
+ cursor c_tiempo is
+ SELECT DTIEMPOPK
+ from d_tiempo
+ where fecha between vFechainicial and vfechafinal;
+
+ cursor c_ventas is
+ /* Aquí va el código del query que desarrollaste, ajustando la fecha de tu
+prueba a las variables vFechaInicial y vFechaFinal*/
+select dp.DPRODPK, de.DEMPLEADOPK, dt.dtiempopk, sum(monto)
+from ventas v, d_producto dp, d_empleado de, d_tiempo dt
+where v.fecha_venta between vFechaInicial and VFechaFinal and v.producto_id = dp.DPRODPK
+and de.IDE = v.EMPLEADO_ID and trunc(fecha) = trunc(fecha_venta)
+group by dp.dprodpk, de.DEMPLEADOPK, dt.dtiempopk
+order by 1,2,3;
+
+BEGIN
+ vFechaInicial := FECHAINICIAL;
+ vFechaFinal := FECHAFINAL;
+
+ open c_tiempo;
+ LOOP
+ /* Ejecucion del borrado de registros*/
+    fetch c_tiempo into vdTiempoPk;
+    exit when c_tiempo%NOTFOUND;
+    delete from H_VENTASEMPLEADOS where dtiempopk = vdtiempopk;
+    commit;
+ END LOOP;
+ close c_tiempo;
+
+ open c_ventas;
+ LOOP
+ /*Operación de inserción de registros*/
+ fetch c_ventas into vDPRODPK, vDEMPLEADOPK, vdTiempoPk, v_MONTOVENTAS;
+ exit when c_ventas%NOTFOUND;
+ insert into h_ventasempleados  (hventaspk, DPRODPK, DEMPLEADOPK, DTIEMPOPK, MONTOVENTAS)
+ values (seq_h_ventasempleados.nextval, vDPRODPK, vDEMPLEADOPK, vdTiempoPk, v_MONTOVENTAS);
+ commit;
+ END LOOP;
+ close c_ventas;
+END ACTUALIZA_VENTASEMPLEADO;
+
+
+//ACTUALIZA_VENTASCLIENTE:
+
+create or replace PROCEDURE ACTUALIZA_VENTASCLIENTES (
+ FECHAINICIAL IN DATE, 
+ FECHAFINAL IN DATE
+) AS
+ vFechaInicial date;
+ vFechaFinal date;
+ vDUBIPK number;
+ vdTiempoPk number;
+ v_clientes number;
+
+ cursor c_tiempo is
+ SELECT DTIEMPOPK
+ from d_tiempo
+ where fecha between vFechainicial and vfechafinal;
+
+ cursor c_ventas is
+ /* Aquí va el código del query que desarrollaste, ajustando la fecha de tu
+prueba a las variables vFechaInicial y vFechaFinal*/
+select ds.DUBIPK, dt.dtiempopk, count(cliente_id)
+from ventas v, d_sucursal ds, d_tiempo dt
+where v.fecha_venta between vFechaInicial and VFechaFinal
+and ds.DUBIPK = v.SUCURSAL_ID and trunc(fecha) = trunc(fecha_venta)
+group by ds.DUBIPK, dt.dtiempopk
+order by 1,2;
+
+BEGIN
+ vFechaInicial := FECHAINICIAL;
+ vFechaFinal := FECHAFINAL;
+
+ open c_tiempo;
+ LOOP
+ /* Ejecucion del borrado de registros*/
+    fetch c_tiempo into vdTiempoPk;
+    exit when c_tiempo%NOTFOUND;
+    delete from H_VENTASCLIENTES where dtiempopk = vdtiempopk;
+    commit;
+ END LOOP;
+ close c_tiempo;
+
+ open c_ventas;
+ LOOP
+ /*Operación de inserción de registros*/
+ fetch c_ventas into vDUBIPK, vdTiempoPk, v_clientes;
+ exit when c_ventas%NOTFOUND;
+ insert into H_VENTASCLIENTES(hventaspk, DUBIPK, DTIEMPOPK, CLIENTES)
+ values (seq_h_ventasclientes.nextval, vDUBIPK, vdTiempoPk, v_clientes);
+ commit;
+ END LOOP;
+ close c_ventas;
+END ACTUALIZA_VENTASCLIENTES;
+
+//ACTUALIZA_VENTASUCURSAL:
+
+create or replace PROCEDURE ACTUALIZA_VENTASUCURSAL (
+ FECHAINICIAL IN DATE, 
+ FECHAFINAL IN DATE
+) AS
+ vFechaInicial date;
+ vFechaFinal date;
+ vDPRODPK number;
+ vDUBIPK number;
+ vdTiempoPk number;
+ v_ventasc number(19,2);
+
+ cursor c_tiempo is
+ SELECT DTIEMPOPK
+ from d_tiempo
+ where fecha between vFechainicial and vfechafinal;
+
+ cursor c_ventas is
+ /* Aquí va el código del query que desarrollaste, ajustando la fecha de tu
+prueba a las variables vFechaInicial y vFechaFinal*/
+select dp.DPRODPK, ds.DUBIPK, dt.dtiempopk, sum(monto)
+from ventas v, d_producto dp, d_sucursal ds, d_tiempo dt
+where v.fecha_venta between vFechaInicial and VFechaFinal and v.producto_id = dp.DPRODPK
+and ds.DUBIPK = v.SUCURSAL_ID and trunc(fecha) = trunc(fecha_venta)
+group by dp.dprodpk, ds.DUBIPK, dt.dtiempopk
+order by 1,2,3;
+
+BEGIN
+ vFechaInicial := FECHAINICIAL;
+ vFechaFinal := FECHAFINAL;
+
+ open c_tiempo;
+ LOOP
+ /* Ejecucion del borrado de registros*/
+    fetch c_tiempo into vdTiempoPk;
+    exit when c_tiempo%NOTFOUND;
+    delete from H_VENTASUCURSAL where dtiempopk = vdtiempopk;
+    commit;
+ END LOOP;
+ close c_tiempo;
+
+ open c_ventas;
+ LOOP
+ /*Operación de inserción de registros*/
+ fetch c_ventas into vDPRODPK, vDUBIPK, vdTiempoPk, v_ventasc;
+ exit when c_ventas%NOTFOUND;
+ insert into H_VENTASUCURSAL  (hventaspk, DPRODPK, DUBIPK, DTIEMPOPK, VENTASC)
+ values (seq_h_ventasucursal.nextval, vDPRODPK, vDUBIPK, vdTiempoPk, v_ventasc);
+ commit;
+ END LOOP;
+ close c_ventas;
+END ACTUALIZA_VENTASUCURSAL;
+
+
+
+//DIMENSIONES:
+//D_EMPLEADO:
+
+CREATE TABLE D_EMPLEADO 
+(
+  DEMPLEADOPK NUMBER NOT NULL 
+, NOMBRE VARCHAR2(105 BYTE) 
+, APELLIDO VARCHAR2(105 BYTE) 
+, PUESTO VARCHAR2(35 BYTE) 
+, SUELDO NUMBER(19, 2) 
+, IDE NUMBER 
+, CONSTRAINT D_EMPLEADO_PK PRIMARY KEY 
+  (
+    DEMPLEADOPK 
+  )
+  USING INDEX 
+  (
+      CREATE UNIQUE INDEX D_EMPLEADO_PK ON D_EMPLEADO (DEMPLEADOPK ASC) 
+      LOGGING 
+      TABLESPACE USERS 
+      PCTFREE 10 
+      INITRANS 2 
+      STORAGE 
+      ( 
+        INITIAL 65536 
+        NEXT 1048576 
+        MINEXTENTS 1 
+        MAXEXTENTS UNLIMITED 
+        BUFFER_POOL DEFAULT 
+      ) 
+      NOPARALLEL 
+  )
+  ENABLE 
+) 
+LOGGING 
+TABLESPACE USERS 
+PCTFREE 10 
+INITRANS 1 
+STORAGE 
+( 
+  INITIAL 65536 
+  NEXT 1048576 
+  MINEXTENTS 1 
+  MAXEXTENTS UNLIMITED 
+  BUFFER_POOL DEFAULT 
+) 
+NOCOMPRESS 
+NOPARALLEL;
+
+
+//D_PRODUCTO:
+
+CREATE TABLE D_PRODUCTO 
+(
+  DPRODPK NUMBER NOT NULL 
+, NOMBRE VARCHAR2(105 BYTE) 
+, DESCRIPCION VARCHAR2(300 BYTE) 
+, PRECIO NUMBER(19, 2) 
+, CONSTRAINT D_PRODUCTO_PK PRIMARY KEY 
+  (
+    DPRODPK 
+  )
+  USING INDEX 
+  (
+      CREATE UNIQUE INDEX D_PRODUCTO_PK ON D_PRODUCTO (DPRODPK ASC) 
+      LOGGING 
+      TABLESPACE USERS 
+      PCTFREE 10 
+      INITRANS 2 
+      STORAGE 
+      ( 
+        INITIAL 65536 
+        NEXT 1048576 
+        MINEXTENTS 1 
+        MAXEXTENTS UNLIMITED 
+        BUFFER_POOL DEFAULT 
+      ) 
+      NOPARALLEL 
+  )
+  ENABLE 
+) 
+LOGGING 
+TABLESPACE USERS 
+PCTFREE 10 
+INITRANS 1 
+STORAGE 
+( 
+  INITIAL 65536 
+  NEXT 1048576 
+  MINEXTENTS 1 
+  MAXEXTENTS UNLIMITED 
+  BUFFER_POOL DEFAULT 
+) 
+NOCOMPRESS 
+NOPARALLEL;
+
+
+//D_SUCURSAL:
+
+CREATE TABLE D_SUCURSAL 
+(
+  DUBIPK NUMBER NOT NULL 
+, NOMBRE VARCHAR2(105 BYTE) 
+, UBICACION VARCHAR2(105 BYTE) 
+, CONSTRAINT D_UBICACION_PK PRIMARY KEY 
+  (
+    DUBIPK 
+  )
+  USING INDEX 
+  (
+      CREATE UNIQUE INDEX D_UBICACION_PK ON D_SUCURSAL (DUBIPK ASC) 
+      LOGGING 
+      TABLESPACE USERS 
+      PCTFREE 10 
+      INITRANS 2 
+      STORAGE 
+      ( 
+        INITIAL 65536 
+        NEXT 1048576 
+        MINEXTENTS 1 
+        MAXEXTENTS UNLIMITED 
+        BUFFER_POOL DEFAULT 
+      ) 
+      NOPARALLEL 
+  )
+  ENABLE 
+) 
+LOGGING 
+TABLESPACE USERS 
+PCTFREE 10 
+INITRANS 1 
+STORAGE 
+( 
+  INITIAL 65536 
+  NEXT 1048576 
+  MINEXTENTS 1 
+  MAXEXTENTS UNLIMITED 
+  BUFFER_POOL DEFAULT 
+) 
+NOCOMPRESS 
+NOPARALLEL;
+
+//D_TIEMPO:
+
+CREATE TABLE D_TIEMPO 
+(
+  DTIEMPOPK NUMBER NOT NULL 
+, FECHA DATE 
+, ANIO VARCHAR2(4 BYTE) 
+, MES VARCHAR2(30 BYTE) 
+, DIA NUMBER 
+, SEMANA NUMBER 
+, CONSTRAINT D_TIEMPO_PK PRIMARY KEY 
+  (
+    DTIEMPOPK 
+  )
+  USING INDEX 
+  (
+      CREATE UNIQUE INDEX D_TIEMPO_PK ON D_TIEMPO (DTIEMPOPK ASC) 
+      LOGGING 
+      TABLESPACE USERS 
+      PCTFREE 10 
+      INITRANS 2 
+      STORAGE 
+      ( 
+        INITIAL 65536 
+        NEXT 1048576 
+        MINEXTENTS 1 
+        MAXEXTENTS UNLIMITED 
+        BUFFER_POOL DEFAULT 
+      ) 
+      NOPARALLEL 
+  )
+  ENABLE 
+) 
+LOGGING 
+TABLESPACE USERS 
+PCTFREE 10 
+INITRANS 1 
+STORAGE 
+( 
+  INITIAL 65536 
+  NEXT 1048576 
+  MINEXTENTS 1 
+  MAXEXTENTS UNLIMITED 
+  BUFFER_POOL DEFAULT 
+) 
+NOCOMPRESS 
+NOPARALLEL;
+
+
+//H_VENTASCLIENTES:
+
+CREATE TABLE H_VENTASCLIENTES 
+(
+  HVENTASPK NUMBER NOT NULL 
+, DUBIPK NUMBER NOT NULL 
+, DTIEMPOPK NUMBER NOT NULL 
+, CLIENTES NUMBER 
+) 
+LOGGING 
+TABLESPACE USERS 
+PCTFREE 10 
+INITRANS 1 
+STORAGE 
+( 
+  INITIAL 65536 
+  NEXT 1048576 
+  MINEXTENTS 1 
+  MAXEXTENTS UNLIMITED 
+  BUFFER_POOL DEFAULT 
+) 
+NOCOMPRESS 
+NOPARALLEL;
+
+
+//H_VENTASEMPLEADOS:
+
+CREATE TABLE H_VENTASEMPLEADOS 
+(
+  HVENTASPK NUMBER NOT NULL 
+, DPRODPK NUMBER NOT NULL 
+, DEMPLEADOPK NUMBER NOT NULL 
+, DTIEMPOPK NUMBER NOT NULL 
+, MONTOVENTAS NUMBER 
+) 
+LOGGING 
+TABLESPACE USERS 
+PCTFREE 10 
+INITRANS 1 
+STORAGE 
+( 
+  INITIAL 65536 
+  NEXT 1048576 
+  MINEXTENTS 1 
+  MAXEXTENTS UNLIMITED 
+  BUFFER_POOL DEFAULT 
+) 
+NOCOMPRESS 
+NOPARALLEL;
+
+//H_VENTASUCURSAL:
+CREATE TABLE H_VENTASUCURSAL 
+(
+  HVENTASPK NUMBER NOT NULL 
+, DPRODPK NUMBER NOT NULL 
+, DUBIPK NUMBER NOT NULL 
+, DTIEMPOPK NUMBER NOT NULL 
+, VENTASC NUMBER(19, 2) 
+) 
+LOGGING 
+TABLESPACE USERS 
+PCTFREE 10 
+INITRANS 1 
+STORAGE 
+( 
+  INITIAL 65536 
+  NEXT 1048576 
+  MINEXTENTS 1 
+  MAXEXTENTS UNLIMITED 
+  BUFFER_POOL DEFAULT 
+) 
+NOCOMPRESS 
+NOPARALLEL;
+
+
+//Secuencias:
+create sequence seq_d_cliente;
+create sequence seq_d_empleado;
+create sequence seq_d_producto;
+create sequence seq_d_tiempo;
+create sequence seq_d_ubicacion;
+create sequence seq_h_ventasclientes;
+create sequence seq_h_ventasempleados;
+create sequence seq_h_ventasucursal;
+
+
